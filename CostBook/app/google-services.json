@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "604236282410",
+    "firebase_url": "https://costbook-6a711.firebaseio.com",
+    "project_id": "costbook-6a711",
+    "storage_bucket": "costbook-6a711.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604236282410:android:0eea7006f5a274e2",
+        "android_client_info": {
+          "package_name": "finalproject.comp3617.com.costbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604236282410-0pd096elnm77b4d8vg8r2q43ntr5avui.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAH9MufVAYuFpLTXXg5RSnGLnMRqyJmQJI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
