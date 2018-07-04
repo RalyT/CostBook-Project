@@ -2,9 +2,8 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#7289da</color>
 
-    <!-- Colours used in Login Page-->
     <color name="bg_login">#26ae90</color>
     <color name="bg_register">#2e3237</color>
     <color name="bg_main">#428bca</color>
@@ -18,4 +17,21 @@
     <color name="btn_login_bg">#eceef1</color>
     <color name="lbl_name">#333333</color>
     <color name="btn_logut_bg">#ff6861</color>
+
+    <color name="green_dark">#00e673</color>
+    <color name="accent2">#99aab5</color>
+    <color name="light_teal">#80ffcc</color>
+    <color name="light_red">#ffb3b3
+    </color>
+
+    <!-- Category Colours -->
+    <color name="category_entertainment">#80ffcc</color>
+    <color name="category_gas">#ffb3b3</color>
+    <color name="category_education">#dab3ff</color>
+    <color name="category_food">#ffbf80</color>
+    <color name="category_bills">#e6f9ff</color>
+    <color name="category_clothes">#b3cce6</color>
+    <color name="category_other">#FFFFFF</color>
+
+
 </resources>

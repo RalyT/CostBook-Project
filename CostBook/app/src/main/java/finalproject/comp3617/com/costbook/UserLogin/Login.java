@@ -18,7 +18,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import finalproject.comp3617.com.costbook.FunctionalityTest.TestActivity;
 import finalproject.comp3617.com.costbook.MainActivity;
 import finalproject.comp3617.com.costbook.R;
 
@@ -101,7 +100,7 @@ public class Login extends AppCompatActivity {
                             // the auth state listener will be notified and logic to handle the
                             // signed in user can be handled in the listener.
                             } else {
-                                startActivity(new Intent(Login.this, TestActivity.class));
+                                startActivity(new Intent(Login.this, MainActivity.class));
                                 finish();
                             }
                         }

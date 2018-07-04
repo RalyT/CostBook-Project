@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="55dp"
+    tools:context=".HomepageFragment">
+
+    <TextView
+        android:id="@+id/homepage_header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Statistics"
+        android:background="@color/colorAccent"
+        android:paddingTop="5dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@color/white"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/tv_spent_today"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/homepage_header"
+        android:paddingTop="20dp"
+        android:text="Daily Spending"
+        android:background="@color/accent2"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_daily_percent_diff"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_spent_today"
+        android:paddingTop="20dp"
+        android:text="Daily percent Difference"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_spent_month"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_daily_percent_diff"
+        android:text="Monthly Spending"
+        android:background="@color/accent2"
+        android:paddingTop="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tv_monthly_percent_diff"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_below="@+id/tv_spent_month"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="20dp"
+        android:text="Monthly percent Difference"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20dp" />
+
+</RelativeLayout>

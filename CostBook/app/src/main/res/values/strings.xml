@@ -35,13 +35,35 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">CostBook</string>
+    <string name="nav_header_subtitle">Welcome!</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- View Transaction Fragment -->
 
+    <!-- Category Spinner Options -->
+    <string name="spinner_title">Category</string>
+
+    <string-array name="add_category_array">
+        <item>Food</item>
+        <item>Clothes</item>
+        <item>Bills</item>
+        <item>Gas</item>
+        <item>Education</item>
+        <item>Entertainment</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="view_category_array">
+        <item>All</item>
+        <item>Food</item>
+        <item>Clothes</item>
+        <item>Bills</item>
+        <item>Gas</item>
+        <item>Education</item>
+        <item>Entertainment</item>
+        <item>Other</item>
+    </string-array>
 
 </resources>
