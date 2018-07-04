@@ -1,4 +1,4 @@
-package finalproject.comp3617.com.costbook;
+package com.comp3617.finalproject;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -15,6 +15,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.comp3617.finalproject.HelperClasses.CostTransaction;
+import com.comp3617.finalproject.HelperClasses.RecyclerViewAdapter;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,8 +25,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import finalproject.comp3617.com.costbook.HelperClasses.CostTransaction;
 
 public class ViewTransactionFragment extends Fragment {
 

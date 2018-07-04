@@ -1,4 +1,4 @@
-package finalproject.comp3617.com.costbook;
+package com.comp3617.finalproject;
 
 import org.junit.Test;
 

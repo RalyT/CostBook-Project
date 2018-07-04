@@ -1,4 +1,4 @@
-package finalproject.comp3617.com.costbook;
+package com.comp3617.finalproject;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        
+
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 

@@ -7,66 +7,69 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
-    tools:context=".RecyclerViewAdapter">
+    tools:context=".HelperClasses.RecyclerViewAdapter">
 
-        <TextView
-            android:id="@+id/item_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <TextView
-            android:id="@+id/item_category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="75dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/item_cost"
-            app:layout_constraintTop_toBottomOf="@+id/item_title" />
-        <TextView
-            android:id="@+id/item_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="25dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            app:layout_constraintLeft_toRightOf="@+id/item_category"
-            app:layout_constraintRight_toRightOf="@+id/item_cost"
-            app:layout_constraintTop_toBottomOf="@+id/item_title" />
-        <TextView
-            android:id="@+id/item_cost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="75dp"
-            android:textColor="#85bb65"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            app:layout_constraintLeft_toRightOf="@+id/item_category"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_title" />
-        <Button
-            android:id="@+id/btn_edit_item"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
-            android:text="Edit"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/btn_delete_item"
-            app:layout_constraintTop_toBottomOf="@+id/item_cost" />
-        <Button
-            android:id="@+id/btn_delete_item"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
-            android:text="Delete"
-            app:layout_constraintLeft_toRightOf="@+id/btn_edit_item"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_cost" />
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/item_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="75dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/item_cost"
+        app:layout_constraintTop_toBottomOf="@+id/item_title" />
+    <TextView
+        android:id="@+id/item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintLeft_toRightOf="@+id/item_category"
+        app:layout_constraintRight_toRightOf="@+id/item_cost"
+        app:layout_constraintTop_toBottomOf="@+id/item_title" />
+    <TextView
+        android:id="@+id/item_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:textColor="#85bb65"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintLeft_toRightOf="@+id/item_category"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_title" />
+    <Button
+        android:id="@+id/btn_edit_item"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="Edit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_delete_item"
+        app:layout_constraintTop_toBottomOf="@+id/item_cost" />
+    <Button
+        android:id="@+id/btn_delete_item"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@color/light_red"
+        android:layout_marginTop="5dp"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="Delete"
+        app:layout_constraintLeft_toRightOf="@+id/btn_edit_item"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_cost" />
 
 </android.support.constraint.ConstraintLayout>

@@ -34,23 +34,23 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add_head_tv" />
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/title_editText_layout"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/title_editText_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryImage">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/title_editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/categoryImage">
+            android:hint="Title" />
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/title_editText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Title" />
-
-        </android.support.design.widget.TextInputLayout>
+    </android.support.design.widget.TextInputLayout>
 
     <TextView
         android:id="@+id/category_tv"
@@ -84,72 +84,72 @@
 
     </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/desc_editText_layout"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/desc_editText_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_editText_layout">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/desc_editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/category_editText_layout">
+            android:hint="Description" />
+    </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/desc_editText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Description" />
-        </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/cost_editText_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc_editText_layout">
 
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/cost_editText_layout"
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/cost_editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/desc_editText_layout">
+            android:digits="0123456789."
+            android:inputType="numberDecimal"
+            android:hint="Cost" />
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/cost_editText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:digits="0123456789."
-                android:inputType="numberDecimal"
-                android:hint="Cost" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/date_editText_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cost_editText_layout">
 
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/date_editText_layout"
+        <TextView
+            android:id="@+id/date_display_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cost_editText_layout">
+            android:layout_marginTop="8dp"
+            android:text="Select a Date"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
-            <TextView
-                android:id="@+id/date_display_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Select a Date"
-                android:textSize="20dp"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+        <ImageButton
+            android:id="@+id/btn_date_dialog"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@android:drawable/ic_menu_my_calendar"
+            app:layout_constraintTop_toBottomOf="@+id/date_editText_layout" />
 
-            <ImageButton
-                android:id="@+id/btn_date_dialog"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@android:drawable/ic_menu_my_calendar"
-                app:layout_constraintTop_toBottomOf="@+id/date_editText_layout" />
-
-        </android.support.design.widget.TextInputLayout>
+    </android.support.design.widget.TextInputLayout>
 
     <Button
         android:id="@+id/btn_add"

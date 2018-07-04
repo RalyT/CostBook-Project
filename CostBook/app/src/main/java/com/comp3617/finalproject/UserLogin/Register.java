@@ -1,10 +1,9 @@
-package finalproject.comp3617.com.costbook.UserLogin;
-
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+package com.comp3617.finalproject.UserLogin;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -12,17 +11,13 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.comp3617.finalproject.MainActivity;
+import com.comp3617.finalproject.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import finalproject.comp3617.com.costbook.MainActivity;
-import finalproject.comp3617.com.costbook.R;
-
-/**
- *  Register Activity Page
- */
 public class Register extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword;
@@ -106,8 +101,8 @@ public class Register extends AppCompatActivity {
                                 // the auth state listener will be notified and logic to handle the
                                 // signed in user can be handled in the listener.
                                 else {
-                                startActivity(new Intent(Register.this, MainActivity.class));
-                                finish();
+                                    startActivity(new Intent(Register.this, MainActivity.class));
+                                    finish();
                                 }
                             }
                         });

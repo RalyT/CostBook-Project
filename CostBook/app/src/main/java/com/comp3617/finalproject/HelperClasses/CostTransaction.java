@@ -1,6 +1,4 @@
-package finalproject.comp3617.com.costbook.HelperClasses;
-
-import java.util.Date;
+package com.comp3617.finalproject.HelperClasses;
 
 /**
  * Object class for Cost Transactions

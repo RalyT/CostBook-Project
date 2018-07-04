@@ -1,9 +1,7 @@
-package finalproject.comp3617.com.costbook;
+package com.comp3617.finalproject.HelperClasses;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -16,6 +14,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.comp3617.finalproject.AddTransactionFragment;
+import com.comp3617.finalproject.MainActivity;
+import com.comp3617.finalproject.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.FirebaseDatabase;
@@ -23,8 +24,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.List;
-
-import finalproject.comp3617.com.costbook.HelperClasses.CostTransaction;
 
 public class RecyclerViewAdapter extends
         RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
@@ -144,7 +143,7 @@ public class RecyclerViewAdapter extends
         addFragment.setArguments(bundle);
 
         fm.beginTransaction().replace(R.id.adds_frame, addFragment).commit();
-        }
+    }
 
     /**
      * Deletes CostTransaction Item from RecyclerView.
@@ -153,28 +152,28 @@ public class RecyclerViewAdapter extends
      */
     private void deleteCostTransaction(String TransactionId, final int position){
         FirebaseDatabase.getInstance().getReference()
-            .child("transactions").child(TransactionId).removeValue()
-            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()) {
-                    // Removes the transaction item from list and updates
-                    transList.remove(position);
-                    notifyItemRemoved(position);
-                    notifyItemRangeChanged(position, transList.size());
+                .child("transactions").child(TransactionId).removeValue()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            // Removes the transaction item from list and updates
+                            transList.remove(position);
+                            notifyItemRemoved(position);
+                            notifyItemRangeChanged(position, transList.size());
 
-                    Log.d("Delete Transaction", "Transaction has been deleted");
-                    Toast.makeText(context,
-                            "Transaction has been deleted",
-                            Toast.LENGTH_SHORT).show();
-                } else {
-                    Log.d("Delete Transaction", "Transaction could not be deleted");
-                    Toast.makeText(context,
-                            "Transaction could not be deleted",
-                            Toast.LENGTH_SHORT).show();
-                }
-                }
-            });
+                            Log.d("Delete Transaction", "Transaction has been deleted");
+                            Toast.makeText(context,
+                                    "Transaction has been deleted",
+                                    Toast.LENGTH_SHORT).show();
+                        } else {
+                            Log.d("Delete Transaction", "Transaction could not be deleted");
+                            Toast.makeText(context,
+                                    "Transaction could not be deleted",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     /**
@@ -193,3 +192,4 @@ public class RecyclerViewAdapter extends
         return currentDate;
     }
 }
+

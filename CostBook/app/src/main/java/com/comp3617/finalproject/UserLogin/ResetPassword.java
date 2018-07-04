@@ -1,9 +1,8 @@
-package finalproject.comp3617.com.costbook;
-
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+package com.comp3617.finalproject.UserLogin;
 
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -11,13 +10,11 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.comp3617.finalproject.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-/**
- *  Reset Password Activity Page
- */
 public class ResetPassword extends AppCompatActivity {
 
     private EditText inputEmail;
@@ -62,18 +59,17 @@ public class ResetPassword extends AppCompatActivity {
 
                 // Email field is populated, perform password reset process
                 auth.sendPasswordResetEmail(email)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                Toast.makeText(ResetPassword.this, "We have sent the Email instructions on how to reset your password!", Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(ResetPassword.this, "ERROR: Failed to send reset email!", Toast.LENGTH_SHORT).show();
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(ResetPassword.this, "We have sent the Email instructions on how to reset your password!", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    Toast.makeText(ResetPassword.this, "ERROR: Failed to send reset email!", Toast.LENGTH_SHORT).show();
+                                }
+                                progressBar.setVisibility(View.GONE);
                             }
-
-                            progressBar.setVisibility(View.GONE);
-                        }
-                    });
+                        });
                 break;
 
             // Back button

@@ -1,4 +1,4 @@
-package finalproject.comp3617.com.costbook;
+package com.comp3617.finalproject;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("finalproject.comp3617.com.costbook", appContext.getPackageName());
+        assertEquals("com.comp3617.finalproject", appContext.getPackageName());
     }
 }

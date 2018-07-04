@@ -1,4 +1,4 @@
-package finalproject.comp3617.com.costbook;
+package com.comp3617.finalproject;
 
 import android.app.DatePickerDialog;
 import android.content.Context;
@@ -6,9 +6,10 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
-import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.comp3617.finalproject.HelperClasses.CostTransaction;
+import com.comp3617.finalproject.HelperClasses.DatePickerFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -36,9 +39,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.DateFormat;
 import java.util.Calendar;
-
-import finalproject.comp3617.com.costbook.HelperClasses.CostTransaction;
-import finalproject.comp3617.com.costbook.HelperClasses.DatePickerFragment;
 
 public class AddTransactionFragment extends Fragment
         implements DatePickerDialog.OnDateSetListener {
