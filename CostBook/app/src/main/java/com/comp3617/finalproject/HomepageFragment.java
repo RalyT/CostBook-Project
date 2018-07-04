@@ -156,21 +156,21 @@ public class HomepageFragment extends Fragment {
                             percentDailyDifference += -2 * percentDailyDifference;
                             tvPreviousDailySpending.setText("You have spent  -%" + df.format(percentDailyDifference)
                                     + "  less than yesterday: ($" + previousDaySpending + ")");
-                            tvPreviousDailySpending.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.light_teal));
+                            tvPreviousDailySpending.setBackgroundResource(R.color.light_teal);
                         } else {
                             tvPreviousDailySpending.setText("You have spent  %" + df.format(percentDailyDifference)
                                     + "  more than yesterday: ($" + previousDaySpending + ")");
-                            tvPreviousDailySpending.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.light_red));
+                            tvPreviousDailySpending.setBackgroundResource(R.color.light_red);
                         }
                         if (percentMonthlyDifference < 0) {
                             percentMonthlyDifference += -2 * percentMonthlyDifference;
                             tvPreviousMonthlySpending.setText("You have spent  -%" + df.format(percentMonthlyDifference)
                                     + "  less than last Month: ($" + df.format(previousMonthSpending) + ")");
-                            tvPreviousMonthlySpending.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.light_teal));
+                            tvPreviousMonthlySpending.setBackgroundResource(R.color.light_teal);
                         } else {
                             tvPreviousMonthlySpending.setText("You have spent %" + df.format(percentMonthlyDifference)
                                     + " more than last month: ($" + df.format(previousMonthSpending) + ")");
-                            tvPreviousMonthlySpending.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.light_red));
+                            tvPreviousMonthlySpending.setBackgroundResource(R.color.light_red);
                         }
                     }
                     @Override

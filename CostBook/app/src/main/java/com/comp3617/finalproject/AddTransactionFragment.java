@@ -57,6 +57,7 @@ public class AddTransactionFragment extends Fragment
     private TextView headTxt;
     private ImageView categoryImage;
     private TextView displayDate;
+    private TextView costField;
     private Spinner categorySpinner;
     private FragmentManager fm;
 
@@ -74,6 +75,7 @@ public class AddTransactionFragment extends Fragment
         headTxt = view.findViewById(R.id.add_head_tv);
         categoryImage = view.findViewById(R.id.categoryImage);
         displayDate = view.findViewById(R.id.date_display_tv);
+        costField = (EditText)view.findViewById(R.id.cost_editText);
         addButton = (Button) view.findViewById(R.id.btn_add);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,11 +149,19 @@ public class AddTransactionFragment extends Fragment
 
         //add or update depending on existence of transactionId in arguments
         if (getArguments() != null) {
-            transactionId = getArguments().getString("TransactionId");
+            if (getArguments().getString("TransactionId") != null) {
+                transactionId = getArguments().getString("TransactionId");
+                populateUpdateTransaction();
+            } else if (getArguments().getString("OCRData") != null) {
+                String OCRdata = getArguments().getString("OCRData");
+                Log.d("OCRData Add..","OCRData on AddTransaction: " + OCRdata);
+                // Lazily hardcoded, create a class later
+                costField.setText(OCRdata);
+            }
         }
-        if (transactionId != null) {
-            populateUpdateTransaction();
-        }
+//        if (transactionId != null) {
+//            populateUpdateTransaction();
+//        }
 
         fm = getFragmentManager();
 
@@ -344,7 +354,7 @@ public class AddTransactionFragment extends Fragment
         ((EditText) getActivity()
                 .findViewById(R.id.cost_editText)).setText(costTransaction.getCost());
 
-        // Need to consider how to update DatepickeerDialog
+        // Need to consider how to update DatepickerDialog
     }
 
     /**

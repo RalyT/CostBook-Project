@@ -1,6 +1,7 @@
 package com.comp3617.finalproject;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,6 +18,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.comp3617.finalproject.UserLogin.Login;
+import com.comp3617.finalproject.UserLogin.ResetPassword;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -38,7 +42,8 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                startActivity(new Intent(MainActivity.this, OCRFunction.class));
+                Snackbar.make(view, "OCR Camera engaged", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -114,9 +119,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -138,15 +143,41 @@ public class MainActivity extends AppCompatActivity
             viewTransactionFragment();
             Log.d("nav_transaction_history","viewTransactionFragment code area");
 
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+//        } else if (id == R.id.nav_manage) {
+//
+//        } else if (id == R.id.nav_share) {
+//
+//        } else if (id == R.id.nav_send) {
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Intent ocrIntent = getIntent();
+        // Check if an intent is sent through
+        if (ocrIntent.getExtras() != null) {
+            String ocrData = ocrIntent.getExtras().getString("textSnapshot");
+            if(ocrData.length() > 2) {
+
+                // Parse String for only number values
+                String parsedOCRData = ocrData.replaceAll("[^0-9.]", "");
+
+                // Open up addTransactionFragment
+                Bundle bundle = new Bundle();
+                bundle.putString("OCRData", parsedOCRData);
+
+                FragmentTransaction ft = fm.beginTransaction();
+                AddTransactionFragment addFragment = new AddTransactionFragment();
+                addFragment.setArguments(bundle);
+
+                ft.replace(R.id.adds_frame, addFragment);
+                ft.commit();
+            }
+        }
     }
 }
